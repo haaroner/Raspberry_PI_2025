@@ -89,7 +89,7 @@ while True:
       Fedor_moment = cv2.moments(best_contour)
       cx = int(Fedor_moment['m10'] / Fedor_moment["m00"])
       cy = int(Fedor_moment['m10'] / Fedor_moment["m00"])
-      image = cv2.circle(image, (cx, cy), 10, (0, 0, 255))
+      image = cv2.circle(image, (cx, cy), 10, (0, 0, 255), thickness=10)
     if(timer - print_timer > 1000):
         print("CPU temp =",CPUTemperature().temperature)
         #print('time =', time.time())
